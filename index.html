@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دراسة حالة تفاعلية: شركة مخبز القمح الذهبي</title>
+  <meta name="description" content="دراسة حالة تفاعلية للصف الحادي عشر، الوحدة 1، نتاج التعلم ب: شركة مخبز القمح الذهبي.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23312e81'/%3E%3Cpath d='M16 26V12' stroke='%23fbbf24' stroke-width='2' stroke-linecap='round'/%3E%3Cellipse cx='16' cy='9' rx='2.2' ry='3.2' fill='%23fde68a'/%3E%3Cpath d='M16 20c-3-1-5-3-5-5 2 .2 4 1.4 5 3.2 1-1.8 3-3 5-3.2 0 2-2 4-5 5z' fill='%23fbbf24'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <script>
+    try {
+      if (localStorage.getItem("gwb-theme") === "light") document.documentElement.classList.remove("dark");
+    } catch (err) {}
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Tajawal", "Segoe UI", "Tahoma", "sans-serif"],
+            display: ["El Messiri", "Tajawal", "Tahoma", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { color-scheme: dark; scroll-behavior: smooth; }
+    html:not(.dark) { color-scheme: light; }
+    body { line-height: 1.8; }
+    #case, #questions { scroll-margin-top: 5.75rem; }
+    :focus-visible { outline: 2px solid #818cf8; outline-offset: 3px; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    button:disabled { opacity: 0.38; cursor: not-allowed; }
+    button[data-tab][aria-selected="true"] {
+      background: #4f46e5;
+      color: #fff;
+      border-color: transparent;
+    }
+    button[data-dot][aria-current="step"] {
+      background: #4f46e5;
+      color: #fff;
+      border-color: transparent;
+    }
+    .rise { animation: rise 0.38s ease; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: none; }
+    }
+    .live-dot { animation: pulse 1.8s ease-in-out infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+  <a class="sr-only focus:not-sr-only focus:absolute focus:right-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-indigo-600 focus:px-4 focus:py-2 focus:text-white" href="#content">تخطي إلى المحتوى</a>
+
+  <header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/85 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/85">
+    <div class="h-1 bg-gradient-to-l from-amber-400 via-indigo-500 to-indigo-800"></div>
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
+      <a href="#content" class="flex items-center gap-3 text-inherit no-underline">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-indigo-950 text-amber-300 dark:bg-indigo-900" aria-hidden="true">
+          <svg viewBox="0 0 48 48" class="h-7 w-7" fill="none">
+            <path d="M24 42V16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+            <ellipse cx="24" cy="12" rx="3" ry="4.5" fill="#fde68a"/>
+            <path d="M24 30c-6-1.5-9-5.5-9-9 4 .4 7 2.6 9 6 2-3.4 5-5.6 9-6 0 3.5-3 7.5-9 9z" fill="currentColor"/>
+            <path d="M24 22c-5-1-7.5-4-7.5-7 3 .3 5.5 2 7.5 4.6 2-2.6 4.5-4.3 7.5-4.6 0 3-2.5 6-7.5 7z" fill="#fbbf24"/>
+          </svg>
+        </span>
+        <span>
+          <span class="block text-xs font-bold text-indigo-700 dark:text-indigo-300">الوحدة 1 · نتاج التعلم ب · الصف الحادي عشر</span>
+          <strong class="font-display text-lg leading-tight">مخبز القمح الذهبي</strong>
+        </span>
+      </a>
+      <nav class="flex flex-wrap items-center gap-2" aria-label="أقسام الصفحة">
+        <a class="rounded-full border border-slate-200 px-3 py-1.5 text-sm font-bold text-slate-700 hover:border-indigo-400 hover:text-indigo-700 dark:border-slate-700 dark:text-slate-200 dark:hover:text-white" href="#case">دراسة الحالة</a>
+        <a class="rounded-full border border-slate-200 px-3 py-1.5 text-sm font-bold text-slate-700 hover:border-indigo-400 hover:text-indigo-700 dark:border-slate-700 dark:text-slate-200 dark:hover:text-white" href="#questions">الأسئلة</a>
+        <button id="theme-toggle" type="button" class="rounded-full bg-slate-900 px-3 py-1.5 text-sm font-bold text-white hover:bg-indigo-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-amber-200" aria-pressed="true">مظهر فاتح</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="relative overflow-hidden border-b border-slate-200 dark:border-slate-800">
+      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.18),transparent_52%),radial-gradient(ellipse_at_bottom_left,rgba(251,191,36,0.14),transparent_46%)]"></div>
+      <div class="relative mx-auto max-w-6xl px-4 py-12 md:py-16">
+        <p class="mb-3 text-sm font-bold text-indigo-700 dark:text-indigo-300">فهم كيفية استفادة المؤسسات من البيانات والمعلومات</p>
+        <h1 class="max-w-4xl font-display text-3xl font-bold leading-snug text-slate-950 dark:text-white md:text-5xl">دراسة حالة تفاعلية: شركة مخبز القمح الذهبي</h1>
+        <p class="mt-5 max-w-3xl text-lg text-slate-700 dark:text-slate-300">تجلسين هذا الصباح مسؤولةً عن العمليات في مخبز صغير بعمّان، والفرن لا ينتظر أحداً. على شاشة اللابتوب مئات الرسائل، والدقيق يكفي ليومين، ورصيد الصندوق لا يتجاوز ثمانين ديناراً. في هذه الحصة لا نحفظ تعريفاً ثم نجاوزه؛ نقرأ الشاشة كما يقرأها صاحب القرار، ونسأل: أيُّ ما عليها بيان خام، وأيُّه يصلح أن يصير معلومة؟</p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="rounded-full bg-white px-3 py-1 text-sm font-bold text-slate-800 shadow-sm ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700">الصندوق: 80 ديناراً</span>
+          <span class="rounded-full bg-white px-3 py-1 text-sm font-bold text-slate-800 shadow-sm ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700">الدقيق: يومان</span>
+          <span class="rounded-full bg-white px-3 py-1 text-sm font-bold text-slate-800 shadow-sm ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700">حلويات بلا سكر: 12 عميلاً</span>
+          <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-950 ring-1 ring-amber-200 dark:bg-amber-400/15 dark:text-amber-200 dark:ring-amber-400/30">المورد أ سريع · المورد ب أوفر وأبطأ</span>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a class="rounded-2xl bg-indigo-600 px-5 py-3 font-bold text-white shadow-lg shadow-indigo-600/20 hover:bg-indigo-500" href="#case">قراءة دراسة الحالة</a>
+          <a class="rounded-2xl border border-slate-300 bg-white px-5 py-3 font-bold text-slate-800 hover:border-indigo-400 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100" href="#questions">الانتقال إلى الأسئلة</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="case" class="mx-auto max-w-6xl px-4 py-12">
+      <div class="mb-8 flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <p class="text-sm font-bold text-indigo-700 dark:text-indigo-300">الجزء الأول</p>
+          <h2 class="font-display text-3xl font-bold md:text-4xl">دراسة الحالة الكاملة</h2>
+        </div>
+        <p class="max-w-md text-sm text-slate-600 dark:text-slate-400">تُعرض الوقائع كلها قبل النقاش. الأرقام الواردة هنا هي مرجع الأسئلة، ولا تُخفى أثناء التنقّل بين البطاقات.</p>
+      </div>
+
+      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 md:p-8">
+        <p class="text-lg">شركة مخبز القمح الذهبي منشأة صغيرة في عمّان. تُنتج الخبز والمعجنات يومياً، وتستقبل الطلبات في المحل وعبر واتساب ومنصات التواصل، ثم يوصلها السائق إلى البيوت. أنتِ مسؤولة العمليات، والمدير أحمد هو من يعتمد قرارات التوسع والمنتجات الجديدة. هذا الصباح لا يملك المخبز ترف التأجيل: الدقيق المتبقي يكفي ليومين، ورصيد الصندوق ثمانون ديناراً فقط.</p>
+        <p class="mt-4 text-lg">فتحتِ اللابتوب فوجدتِ الشاشة مزدحمة. مئات رسائل الزبائن بلا تصنيف، وتقرير رقمي للموردين والمخزون، وتقرير للموظفين والعمليات لم يُغلق هذا الشهر. بين الرسائل ارتفاع متكرر لطلبات الحلويات الصحية الخالية من السكر لدى 12 عميلاً، وشكاوى من تأخر التوصيل لأن عناوين كُتبت خطأ أو تُركت ناقصة. الفرن توقف ثلاث مرات، وموظف المبيعات أعاد خطأ العنوان. نظام المبيعات يحفظ الأسماء والهواتف والعناوين والطلبات، وتُنسخ الحسابات أيضاً إلى ملفات جداول مسطحة من نوع Excel. درسكِ: ماذا على هذه الشاشة بيان، وماذا يمكن أن يصير معلومة، ومن في المخبز يحتاج أيَّها؟</p>
+      </article>
+
+      <div class="mt-8">
+        <div class="mb-4 flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-2xl bg-indigo-100 text-indigo-700 dark:bg-indigo-500/15 dark:text-indigo-300" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm8 1a2.5 2.5 0 1 0-2.5-2.5A2.5 2.5 0 0 0 16 12zM3.5 19v-1.2A3.3 3.3 0 0 1 6.8 14.5h2.4A3.3 3.3 0 0 1 12.5 17.8V19M14 19v-1c0-1.4.8-2.6 2-3.1" stroke-linecap="round"/></svg>
+          </span>
+          <h3 class="font-display text-2xl font-bold">الهيكل الوظيفي والموظفون</h3>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <article class="w-full max-w-md rounded-3xl border border-amber-200 bg-amber-50 p-5 dark:border-amber-400/30 dark:bg-amber-400/10">
+            <p class="text-xs font-bold text-amber-800 dark:text-amber-200">المستوى الاستراتيجي</p>
+            <h4 class="mt-1 font-display text-xl font-bold">أحمد · المدير</h4>
+            <p class="mt-2 text-slate-700 dark:text-slate-300">يملك الرؤية وقرار التوسع والمنتج الجديد والسمعة. في نهاية الشهر يسألكِ: هل تعمل العمليات كما ينبغي؟</p>
+          </article>
+          <div class="h-8 w-px bg-slate-300 dark:bg-slate-700" aria-hidden="true"></div>
+          <article class="w-full max-w-md rounded-3xl border border-indigo-200 bg-indigo-50 p-5 dark:border-indigo-400/30 dark:bg-indigo-500/10">
+            <p class="text-xs font-bold text-indigo-800 dark:text-indigo-200">تنسيق الإدارة والتشغيل اليومي</p>
+            <h4 class="mt-1 font-display text-xl font-bold">أنتِ · مسؤولة العمليات</h4>
+            <p class="mt-2 text-slate-700 dark:text-slate-300">تجلسين أمام اللابتوب. تجمعين ما بين المبيعات والمخزون والتوصيل، وتقرئين البيانات قبل أن يبلغ القرار صاحبه.</p>
+          </article>
+          <div class="my-1 hidden h-8 w-full max-w-3xl md:block" aria-hidden="true">
+            <div class="relative h-8">
+              <div class="absolute right-1/2 top-0 h-4 w-px bg-slate-300 dark:bg-slate-700"></div>
+              <div class="absolute left-[16%] right-[16%] top-4 h-px bg-slate-300 dark:bg-slate-700"></div>
+              <div class="absolute right-[16%] top-4 h-4 w-px bg-slate-300 dark:bg-slate-700"></div>
+              <div class="absolute right-1/2 top-4 h-4 w-px bg-slate-300 dark:bg-slate-700"></div>
+              <div class="absolute left-[16%] top-4 h-4 w-px bg-slate-300 dark:bg-slate-700"></div>
+            </div>
+          </div>
+          <div class="mt-4 grid w-full gap-4 md:mt-0 md:grid-cols-3">
+            <article class="rounded-3xl border border-orange-200 bg-white p-5 dark:border-orange-400/25 dark:bg-slate-900">
+              <p class="text-xs font-bold text-orange-700 dark:text-orange-300">المستوى التشغيلي</p>
+              <h4 class="mt-1 font-display text-xl font-bold">الخباز</h4>
+              <p class="mt-2 text-slate-700 dark:text-slate-300">ينفّذ الإنتاج عند الفرن. يحتاج أن يعرف ماذا يُخبز اليوم، وهل الدقيق كافٍ، وهل الفرن سليم.</p>
+            </article>
+            <article class="rounded-3xl border border-sky-200 bg-white p-5 dark:border-sky-400/25 dark:bg-slate-900">
+              <p class="text-xs font-bold text-sky-700 dark:text-sky-300">المستوى التشغيلي</p>
+              <h4 class="mt-1 font-display text-xl font-bold">موظف المبيعات</h4>
+              <p class="mt-2 text-slate-700 dark:text-slate-300">يسجّل الطلب في نظام المبيعات. الفراغ في الهاتف أو الخطأ في العنوان يخرج من النظام كما أُدخل، ويصل إلى السائق.</p>
+            </article>
+            <article class="rounded-3xl border border-emerald-200 bg-white p-5 dark:border-emerald-400/25 dark:bg-slate-900">
+              <p class="text-xs font-bold text-emerald-700 dark:text-emerald-300">المستوى التشغيلي</p>
+              <h4 class="mt-1 font-display text-xl font-bold">سائق التوصيل</h4>
+              <p class="mt-2 text-slate-700 dark:text-slate-300">ينقل الطلبات إلى البيوت. عمله يتوقف على عنوان صحيح ووقت تسليم واقعي، لا على انطباعه عن الزبون.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <div class="mb-4 flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-2xl bg-indigo-100 text-indigo-700 dark:bg-indigo-500/15 dark:text-indigo-300" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4" stroke-linecap="round"/></svg>
+          </span>
+          <h3 class="font-display text-2xl font-bold">البنية التحتية التكنولوجية</h3>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
+          <article class="rounded-3xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+            <p class="text-xs font-bold text-indigo-700 dark:text-indigo-300">جهاز العمل</p>
+            <h4 class="mt-1 font-bold">لابتوب العمليات</h4>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">شاشتكِ أنتِ. عليها الرسائل الخام والتقارير الرقمية التي لم تُحسم بعد.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+            <p class="text-xs font-bold text-indigo-700 dark:text-indigo-300">عرض الإنتاج</p>
+            <h4 class="mt-1 font-bold">شاشة رقمية</h4>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">لوحة متابعة في صالة الإنتاج. يرى عليها الخباز ملخص اليوم، لا مئات الرسائل.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+            <p class="text-xs font-bold text-indigo-700 dark:text-indigo-300">اتصال</p>
+            <h4 class="mt-1 font-bold">شبكة واي فاي</h4>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">تربط اللابتوب وشاشة العرض ونظام المبيعات داخل المخبز.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+            <p class="text-xs font-bold text-indigo-700 dark:text-indigo-300">تسجيل الطلب</p>
+            <h4 class="mt-1 font-bold">نظام المبيعات</h4>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">يحفظ اسم العميل ورقمه وعنوانه وطلبه. دقة الإدخال شرط وصول السائق.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900 sm:col-span-2 xl:col-span-1">
+            <p class="text-xs font-bold text-indigo-700 dark:text-indigo-300">صوت الزبون</p>
+            <h4 class="mt-1 font-bold">منصات التواصل</h4>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">واتساب وإنستغرام وفيسبوك. تصل منها الطلبات والشكاوى والرغبات المتكررة.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <div class="mb-4 flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-2xl bg-indigo-100 text-indigo-700 dark:bg-indigo-500/15 dark:text-indigo-300" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16" stroke-linecap="round"/><path d="M8 15l3-4 3 2 4-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3 class="font-display text-2xl font-bold">البيانات الظاهرة على الشاشات</h3>
+        </div>
+
+        <article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900/60">
+          <div class="mb-4 flex flex-wrap items-center justify-between gap-2">
+            <h4 class="font-display text-xl font-bold">شاشة العرض الرقمية في صالة الإنتاج</h4>
+            <span class="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-900 dark:bg-emerald-500/15 dark:text-emerald-200"><span class="live-dot h-2 w-2 rounded-full bg-emerald-500"></span>ملخص مباشر للخباز</span>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-2xl bg-white p-4 dark:bg-slate-950">
+              <p class="text-sm text-slate-500 dark:text-slate-400">تغطية الدقيق</p>
+              <p class="font-display text-3xl font-bold text-rose-600 dark:text-rose-300">يومان</p>
+            </div>
+            <div class="rounded-2xl bg-white p-4 dark:bg-slate-950">
+              <p class="text-sm text-slate-500 dark:text-slate-400">رصيد الصندوق</p>
+              <p class="font-display text-3xl font-bold">80 <span class="text-base font-sans">ديناراً</span></p>
+            </div>
+            <div class="rounded-2xl bg-white p-4 dark:bg-slate-950">
+              <p class="text-sm text-slate-500 dark:text-slate-400">أعطال الفرن هذا الشهر</p>
+              <p class="font-display text-3xl font-bold text-amber-600 dark:text-amber-300">3</p>
+            </div>
+            <div class="rounded-2xl bg-white p-4 dark:bg-slate-950">
+              <p class="text-sm text-slate-500 dark:text-slate-400">رسائل غير مصنّفة</p>
+              <p class="font-display text-3xl font-bold text-indigo-600 dark:text-indigo-300">438</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="mx-auto mt-8 max-w-5xl">
+          <div class="rounded-t-3xl border border-slate-300 bg-slate-800 p-3 text-slate-100 shadow-2xl dark:border-slate-700 md:p-4">
+            <div class="mb-3 flex items-center gap-2 px-1 text-xs text-slate-400">
+              <span class="h-2.5 w-2.5 rounded-full bg-rose-400"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-300"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+              <span class="ms-2 font-bold text-slate-200">لابتوب مسؤولة العمليات · صباح اليوم</span>
+            </div>
+            <div class="rounded-2xl bg-slate-950 p-3 md:p-4" id="laptop">
+              <div class="mb-3 flex flex-wrap gap-2" role="tablist" aria-label="بيانات شاشة اللابتوب">
+                <button type="button" data-tab="all" role="tab" aria-selected="true" class="rounded-full border border-slate-700 px-3 py-1.5 text-sm font-bold text-slate-200">كل البيانات</button>
+                <button type="button" data-tab="messages" role="tab" aria-selected="false" class="rounded-full border border-slate-700 px-3 py-1.5 text-sm font-bold text-slate-200">رسائل الزبائن</button>
+                <button type="button" data-tab="stock" role="tab" aria-selected="false" class="rounded-full border border-slate-700 px-3 py-1.5 text-sm font-bold text-slate-200">الموردون والمخزون</button>
+                <button type="button" data-tab="ops" role="tab" aria-selected="false" class="rounded-full border border-slate-700 px-3 py-1.5 text-sm font-bold text-slate-200">الموظفون والعمليات</button>
+              </div>
+              <div id="screen-grid" class="grid gap-3 lg:grid-cols-3">
+                <section data-screen="messages" class="rounded-2xl bg-slate-900 p-4 ring-1 ring-white/10">
+                  <h4 class="font-bold text-emerald-300">رسائل الزبائن على واتساب ومنصات التواصل</h4>
+                  <p class="mt-1 text-xs text-slate-400">عيّنة من مئات الرسائل الخام. لم تُفرز بعد حسب النوع.</p>
+                  <ul class="mt-3 space-y-2 text-sm">
+                    <li class="rounded-2xl rounded-ss-md bg-emerald-500/15 px-3 py-2">أين طلبي؟ مرّت ساعة، وقد صحّحتُ العنوان مرتين.</li>
+                    <li class="rounded-2xl rounded-ss-md bg-emerald-500/15 px-3 py-2">هل لديكم حلويات خالية من السكر؟ هذا طلبي الثالث هذا الشهر.</li>
+                    <li class="rounded-2xl rounded-ss-md bg-emerald-500/15 px-3 py-2">العنوان الذي سُجّل لديكم غير العنوان الذي قلته للموظف.</li>
+                    <li class="rounded-2xl rounded-ss-md bg-emerald-500/15 px-3 py-2">تأخر التوصيل أمس، ولن أطلب مرة أخرى.</li>
+                  </ul>
+                  <p class="mt-3 rounded-xl border border-dashed border-amber-400/40 bg-amber-400/10 px-3 py-2 text-sm text-amber-100">ملاحظة غير مبوّبة: تكرر طلب الحلويات الصحية الخالية من السكر لدى 12 عميلاً.</p>
+                </section>
+                <section data-screen="stock" class="rounded-2xl bg-slate-900 p-4 ring-1 ring-white/10">
+                  <h4 class="font-bold text-amber-200">تقرير الموردين والمخزون الرقمي</h4>
+                  <p class="mt-3 rounded-xl bg-rose-500/15 px-3 py-2 text-sm">الدقيق المتبقي يكفي ليومين فقط.</p>
+                  <div class="mt-3 grid grid-cols-2 gap-2 text-sm">
+                    <div class="rounded-xl bg-slate-800 p-3">
+                      <p class="text-xs text-slate-400">المورد أ</p>
+                      <p class="font-display text-2xl font-bold">10</p>
+                      <p>دنانير للكيس</p>
+                      <p class="mt-1 font-bold text-emerald-300">تسليم سريع</p>
+                    </div>
+                    <div class="rounded-xl bg-slate-800 p-3">
+                      <p class="text-xs text-slate-400">المورد ب</p>
+                      <p class="font-display text-2xl font-bold">8</p>
+                      <p>دنانير للكيس</p>
+                      <p class="mt-1 font-bold text-amber-200">تسليم بطيء</p>
+                    </div>
+                  </div>
+                  <p class="mt-3 rounded-xl bg-slate-800 px-3 py-2 text-sm">رصيد الصندوق: <strong>80 ديناراً</strong>. لا يوجد اليوم خط إنتاج للحلويات الخالية من السكر.</p>
+                </section>
+                <section data-screen="ops" class="rounded-2xl bg-slate-900 p-4 ring-1 ring-white/10">
+                  <h4 class="font-bold text-sky-200">تقارير الموظفين والعمليات</h4>
+                  <ul class="mt-3 space-y-2 text-sm">
+                    <li class="rounded-xl bg-slate-800 px-3 py-2">الفرن توقف ثلاث مرات هذا الشهر، وتوقف الإنتاج لساعات في كل مرة.</li>
+                    <li class="rounded-xl bg-slate-800 px-3 py-2">طلبات وصلت متأخرة لأن العنوان في النظام لا يطابق قول الزبون.</li>
+                    <li class="rounded-xl bg-slate-800 px-3 py-2">موظف المبيعات ترك حقل الهاتف أو العنوان فارغاً، وأعاد خطأ العنوان أكثر من مرة.</li>
+                    <li class="rounded-xl bg-slate-800 px-3 py-2">بيانات العملاء والحسابات منسوخة أيضاً في ملف جدول مسطح (Excel).</li>
+                    <li class="rounded-xl bg-slate-800 px-3 py-2">أحمد ينتظر تقييم أداء العمليات لهذا الشهر، والتقرير لم يُغلق.</li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class="h-3 rounded-b-xl bg-slate-600"></div>
+          <div class="mx-auto h-3 w-2/3 rounded-b-2xl bg-slate-500"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="questions" class="border-t border-slate-200 bg-slate-50 py-12 dark:border-slate-800 dark:bg-slate-950">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="mb-8">
+          <p class="text-sm font-bold text-indigo-700 dark:text-indigo-300">الجزء الثاني</p>
+          <h2 class="font-display text-3xl font-bold md:text-4xl">الأسئلة الاستنتاجية للتنقيب والنقاش</h2>
+          <p class="mt-3 max-w-3xl text-slate-700 dark:text-slate-300">يظهر سؤال واحد في كل مرة. يُجاب عنه من دراسة الحالة ومن مصطلحات النتاج: البيانات والمعلومات، ومستويات المؤسسة، ومصادر البيانات، وجودتها.</p>
+        </div>
+
+        <div class="relative mx-auto max-w-4xl">
+          <div class="absolute inset-x-6 top-3 h-full rounded-3xl bg-indigo-200/70 dark:bg-indigo-950/80" aria-hidden="true"></div>
+          <div class="absolute inset-x-3 top-1.5 h-full rounded-3xl bg-indigo-100 dark:bg-slate-900" aria-hidden="true"></div>
+          <article class="relative rounded-3xl border border-slate-200 bg-white p-5 shadow-xl dark:border-slate-700 dark:bg-slate-900 md:p-8">
+            <div class="mb-5">
+              <div class="mb-2 flex items-center justify-between gap-3 text-sm font-bold">
+                <p id="q-count">السؤال 1 من 12</p>
+                <p id="q-percent" class="text-slate-500 dark:text-slate-400">8%</p>
+              </div>
+              <div class="h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800" aria-hidden="true">
+                <div id="q-bar" class="h-full w-[8%] rounded-full bg-indigo-600 transition-all"></div>
+              </div>
+            </div>
+
+            <div id="q-body" class="rise min-h-[9rem]">
+              <p id="q-kicker" class="text-sm font-bold text-indigo-700 dark:text-indigo-300">بطاقة النقاش</p>
+              <h3 id="q-text" class="mt-3 font-display text-2xl font-bold leading-relaxed text-slate-950 dark:text-white md:text-3xl"></h3>
+            </div>
+
+            <div class="mt-6 flex flex-wrap items-center justify-between gap-3">
+              <button id="prev" type="button" class="rounded-2xl border border-slate-300 px-4 py-3 font-bold hover:border-indigo-400 dark:border-slate-600">السؤال السابق</button>
+              <button id="next" type="button" class="rounded-2xl bg-indigo-600 px-5 py-3 font-bold text-white hover:bg-indigo-500">السؤال التالي</button>
+            </div>
+
+            <div id="dots" class="mt-5 flex flex-wrap gap-2" role="group" aria-label="الانتقال إلى سؤال"></div>
+            <p class="mt-4 text-xs text-slate-500 dark:text-slate-400">سهم اليسار: السؤال التالي. سهم اليمين: السؤال السابق.</p>
+            <p id="live" class="sr-only" aria-live="polite"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 py-6 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
+    الوحدة 1 · أنظمة تكنولوجيا المعلومات · نتاج التعلم ب · الصف الحادي عشر
+  </footer>
+
+  <script>
+    var questions = [
+      "عندما تنظرين إلى مئات رسائل الزبائن الخام على شاشة اللابتوب، ما هو الفرق الفعلي بين أن تقرئيها كـ \"بيانات\" مبعثرة، وبين أن تحوليها إلى \"معلومة\" تستفيد منها شركتك في اتخاذ القرار؟",
+      "من بين كل البيانات الظاهرة أمامك على الشاشة الآن، أي منها يهم المدير (أحمد)، وأي منها يهم الخباز، وأي منها يهم سائق التوصيل؟ ولماذا اختلف اهتمام كل واحد منهم بنفس البيانات؟",
+      "إذا أظهرت لك البيانات الرقمية على الشاشة أن هناك ارتفاعاً متكرراً بنسبة 12 عميلاً يطلبون الحلويات الصحية الخالية من السكر، في أي مستوى من مستويات المؤسسة يجب أن يُتخذ قرار دراسة فتح خط إنتاج جديد؟ وكيف سيؤثر ذلك على رصيد الصندوق البالغ 80 ديناراً؟",
+      "بناءً على بيانات المخزون (الدقيق يكفي ليومين) وأسعار الموردين (المورد أ بـ 10 دنانير وسريع، والمورد ب بـ 8 دنانير وبطيء)، وبمعرفة أن رصيدنا 80 ديناراً فقط.. ما هو القرار الفوري الذي ستتخذينه لإنقاذ المخبز؟",
+      "لو طلب منك المدير (أحمد) تقييم أداء العمليات الشهرية، ما هي البيانات المحددة التي ستستخرجينها من النظام لتحكمي على مشكلات التوصيل وصيانة الفرن؟",
+      "كيف تحولت منصات التواصل الاجتماعي الخاصة بالمخبز من مجرد وسائل ترفيه عادية إلى \"منجم بيانات\" يحدد طبيعة رغبات الزبائن؟",
+      "ما هي الخطورة المترتبة على تلقي شكاوى الزبائن وتأخر التوصيل بسبب عناوين خاطئة، وكيف تؤثر هذه البيانات الرقمية على سمعة المخبز؟",
+      "لو تعرض نظام قاعدة بيانات عملاء المخبز لاختراق مفاجئ، ما هي الأضرار التي قد تلحق بشركتنا الصغيرة من حيث الثقة والسوق؟",
+      "ما الفرق الجذري بين أن نقوم نحن بعمل استطلاع رأي بأنفسنا للزبائن الوافدين (بيانات أولية) وبين أن نقرأ تقريراً جاهزاً على الإنترنت عن سوق المخابز (بيانات ثانوية)؟",
+      "تخيلي أن موظف المبيعات أخطأ في كتابة عنوان الزبون مرة أخرى.. ما هي الخسائر المالية والتشغيلية التي سيتعرض لها مخبزنا؟",
+      "كيف يمكنكِ تصميم النظام برمجياً لمنع الموظف من ترك حقل \"رقم الهاتف\" أو \"العنوان\" فارغاً عند إدخال بيانات الطلبية؟",
+      "لو استمر المخبز في حفظ بيانات عملائه وحساباته على ملفات جداول بسيطة ومسطحة (مثل Excel)، لماذا ستصبح هذه الطريقة غير كافية إذا توسعت شركتنا مستقبلاً؟"
+    ];
+
+    var index = 0;
+
+    try {
+      var saved = sessionStorage.getItem("gwb-q");
+      if (saved !== null && !isNaN(Number(saved))) {
+        var n = Number(saved);
+        if (n >= 0 && n < questions.length) index = n;
+      }
+    } catch (err) {}
+
+    var qCount = document.getElementById("q-count");
+    var qPercent = document.getElementById("q-percent");
+    var qBar = document.getElementById("q-bar");
+    var qText = document.getElementById("q-text");
+    var qBody = document.getElementById("q-body");
+    var prevBtn = document.getElementById("prev");
+    var nextBtn = document.getElementById("next");
+    var dots = document.getElementById("dots");
+    var live = document.getElementById("live");
+    var themeBtn = document.getElementById("theme-toggle");
+
+    function render(announce) {
+      var pct = Math.round(((index + 1) / questions.length) * 100);
+      qCount.textContent = "السؤال " + (index + 1) + " من " + questions.length;
+      qPercent.textContent = pct + "%";
+      qBar.style.width = pct + "%";
+      qText.textContent = questions[index];
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === questions.length - 1;
+      nextBtn.textContent = index === questions.length - 1 ? "نهاية الأسئلة" : "السؤال التالي";
+      dots.querySelectorAll("[data-dot]").forEach(function (dot, i) {
+        if (i === index) dot.setAttribute("aria-current", "step");
+        else dot.removeAttribute("aria-current");
+      });
+      qBody.classList.remove("rise");
+      void qBody.offsetWidth;
+      qBody.classList.add("rise");
+      try { sessionStorage.setItem("gwb-q", String(index)); } catch (err) {}
+      if (announce) live.textContent = qCount.textContent;
+    }
+
+    function go(to) {
+      if (to < 0 || to >= questions.length || to === index) return;
+      index = to;
+      render(true);
+    }
+
+    questions.forEach(function (_, i) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.dataset.dot = String(i + 1);
+      dot.className = "grid h-9 w-9 place-items-center rounded-full border border-slate-300 text-sm font-bold dark:border-slate-600";
+      dot.textContent = String(i + 1);
+      dot.setAttribute("aria-label", "السؤال " + (i + 1));
+      dot.addEventListener("click", function () { go(i); });
+      dots.appendChild(dot);
+    });
+
+    prevBtn.addEventListener("click", function () { go(index - 1); });
+    nextBtn.addEventListener("click", function () { go(index + 1); });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+      if (event.target && (event.target.tagName === "INPUT" || event.target.tagName === "TEXTAREA")) return;
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        go(index + 1);
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        go(index - 1);
+      }
+    });
+
+    document.querySelectorAll("[data-tab]").forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        var name = tab.dataset.tab;
+        document.querySelectorAll("[data-tab]").forEach(function (item) {
+          item.setAttribute("aria-selected", item === tab ? "true" : "false");
+        });
+        document.querySelectorAll("[data-screen]").forEach(function (panel) {
+          var show = name === "all" || panel.dataset.screen === name;
+          panel.classList.toggle("hidden", !show);
+        });
+        document.getElementById("screen-grid").classList.toggle("lg:grid-cols-3", name === "all");
+      });
+    });
+
+    function paintTheme() {
+      var dark = document.documentElement.classList.contains("dark");
+      themeBtn.textContent = dark ? "مظهر فاتح" : "مظهر داكن";
+      themeBtn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+
+    themeBtn.addEventListener("click", function () {
+      document.documentElement.classList.toggle("dark");
+      var dark = document.documentElement.classList.contains("dark");
+      try { localStorage.setItem("gwb-theme", dark ? "dark" : "light"); } catch (err) {}
+      paintTheme();
+    });
+
+    paintTheme();
+    render(false);
+  </script>
+</body>
+</html>
